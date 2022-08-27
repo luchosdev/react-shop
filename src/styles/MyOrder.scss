@@ -1,8 +1,8 @@
 @import 'vars';
 
 .MyOrder {
-	width: 360px;
-	padding: 24px;
+	width: 380px;
+	padding: 20px;
 	box-sizing: border-box;
 	position: absolute;
 	right: 0;
@@ -16,7 +16,29 @@
 	animation: swipeLeft 1s ease forwards;
 }
 @keyframes swipeLeft {
-	100% {transform: translateX(-500px);}
+	100% {transform: translateX(-200px);}
+}
+
+.my-order-content{
+	overflow-y: scroll;
+	max-height: 400px;
+}
+	/* width */
+.my-order-content::-webkit-scrollbar {
+	width: 10px;
+	margin-left: px;
+}
+	/* Track */
+.my-order-content::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+	/* Handle */
+.my-order-content::-webkit-scrollbar-thumb {
+	background: #888;
+}
+	/* Handle on hover */
+.my-order-content::-webkit-scrollbar-thumb:hover {
+	background: #555;
 }
 .title-container {
 	display: flex;
@@ -66,5 +88,8 @@
 @media (max-width: 640px) {
 	.MyOrder {
 		width: 100%;
+	}
+	@keyframes swipeLeft {
+		100% {transform: translateX(0);}
 	}
 }
