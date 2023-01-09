@@ -1,6 +1,7 @@
 @import 'vars';
 
 .OrderItem {
+	padding-right: 10px;
 	display: grid;
 	grid-template-columns: auto 1fr auto auto;
 	gap: 16px;
